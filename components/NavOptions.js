@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import {
   FlatList,
+  Dimensions,
   Image,
   Text,
   TouchableOpacity,
@@ -11,6 +12,7 @@ import { Icon } from 'react-native-elements'
 import tw from 'twrnc'
 import { useSelector } from 'react-redux'
 import { selectOrigin } from '../slices/navSlice'
+
 
 const data = [
   {
@@ -30,6 +32,7 @@ const data = [
 const NavOptions = () => {
   const navigation = useNavigation()
   const origin = useSelector(selectOrigin)
+  const imageWidth = Dimensions.get('screen').width / 3.4587780905623395
 
   return (
     <FlatList
@@ -38,13 +41,13 @@ const NavOptions = () => {
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <TouchableOpacity
-          style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+          style={tw`pl-6 pr-4 pb-8 pt-4 bg-gray-200 m-2`}
           onPress={() => navigation.navigate(item.screen)}
           disabled={!origin}
         >
           <View style={tw`${!origin ? 'opacity-20' : 'opacity-100'}`}>
             <Image
-              style={{ width: 120, height: 120, resizeMode: 'contain' }}
+              style={{ width: imageWidth, height: 120, resizeMode: 'contain' }}
               source={{ uri: item.image }}
             />
             <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
