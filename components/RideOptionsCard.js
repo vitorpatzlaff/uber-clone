@@ -54,7 +54,7 @@ const RideOptionsCard = () => {
             type='fontawesome'
           />
         </TouchableOpacity>
-        <Text style={tw`text-center py-5 text-xl`}>Select a Ride - {travelTimeInformation?.distance.text}</Text>
+        <Text style={tw`text-center py-5 text-xl`}>Select a Ride - {travelTimeInformation?.distance?.text}</Text>
       </View>
 
       <FlatList
@@ -77,10 +77,10 @@ const RideOptionsCard = () => {
             
             <View style={tw`-ml-8`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
+              <Text>{travelTimeInformation?.duration?.text} Travel Time</Text>
             </View>
             <Text style={tw`text-xl`}>
-              R${(travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100}
+              R${(travelTimeInformation?.duration?.value * SURGE_CHARGE_RATE * multiplier) / 100}
             </Text>
           </TouchableOpacity>
         )}
