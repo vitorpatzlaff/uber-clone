@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import tw from 'twrnc'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Icon } from 'react-native-elements/dist/icons/Icon'

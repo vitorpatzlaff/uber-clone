@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 import tw from 'twrnc'
 import MapView, { Marker } from 'react-native-maps'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectOrigin, selectDestination, setTravelTimeInformation } from '../slices/navSlice'
 import MapViewDirections from 'react-native-maps-directions'
-import { GOOGLE_MAPS_APIKEY } from '../env'
+import { GOOGLE_MAPS_APIKEY } from '@env'
 
 const Map = () => {
   const origin = useSelector(selectOrigin)
@@ -85,3 +86,5 @@ const Map = () => {
 }
 
 export default Map
+
+const styles = StyleSheet.create({})

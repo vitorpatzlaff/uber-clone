@@ -6,11 +6,11 @@ import {
 } from 'react-native'
 import tw from 'twrnc'
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'
+import { GOOGLE_MAPS_APIKEY } from '@env'
 import { useDispatch } from 'react-redux'
 import { setDestination, setOrigin } from '../slices/navSlice'
 import NavOptions from '../components/NavOptions'
 import NavFavorites from '../components/NavFavorites'
-import { GOOGLE_MAPS_APIKEY } from '../env'
 
 const HomeScreen = () => {
   const dispatch = useDispatch()
@@ -69,3 +69,9 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen
+
+// const styles = StyleSheet.create({
+//   text: {
+//     color: 'blue',
+//   }
+// })
