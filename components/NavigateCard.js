@@ -13,8 +13,7 @@ import { setDestination } from '../slices/navSlice'
 import { useNavigation } from '@react-navigation/native'
 import { Icon } from 'react-native-elements'
 import NavFavorites from './NavFavorites'
-
-const { GOOGLE_MAPS_APIKEY } = process.env
+import { GOOGLE_MAPS_APIKEY } from '../env'
 
 const NavigateCard = () => {
   const dispatch = useDispatch()

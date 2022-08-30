@@ -10,8 +10,7 @@ import { useDispatch } from 'react-redux'
 import { setDestination, setOrigin } from '../slices/navSlice'
 import NavOptions from '../components/NavOptions'
 import NavFavorites from '../components/NavFavorites'
-
-const { GOOGLE_MAPS_APIKEY } = process.env
+import { GOOGLE_MAPS_APIKEY } from '../env'
 
 const HomeScreen = () => {
   const dispatch = useDispatch()
